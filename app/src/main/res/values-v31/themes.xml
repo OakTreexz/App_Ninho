@@ -1,0 +1,10 @@
+<resources>
+    <style name="Theme.App_Ninho.Splash" parent="Theme.App_Ninho">
+        <item name="android:windowBackground">@color/ninho_fundo</item>
+        <item name="android:statusBarColor">@color/ninho_fundo</item>
+        <item name="android:navigationBarColor">@color/ninho_fundo</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowSplashScreenBackground">@color/ninho_fundo</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_vazio</item>
+    </style>
+</resources>

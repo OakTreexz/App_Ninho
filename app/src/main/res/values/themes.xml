@@ -1,9 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.App_Ninho" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    <!-- Este é o tema que já existe, não mexa nele -->
+    <style name="Theme.App_Ninho" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- ...o que já estava aqui... -->
     </style>
 
-    <style name="Theme.App_Ninho" parent="Base.Theme.App_Ninho" />
+    <!-- Cole aqui, logo abaixo -->
+     <style name="Theme.App_Ninho.Splash" parent="Theme.App_Ninho">
+    <item name="android:windowBackground">@color/ninho_fundo</item>
+    <item name="android:statusBarColor">@color/ninho_fundo</item>
+    <item name="android:navigationBarColor">@color/ninho_fundo</item>
+    <item name="android:windowLightStatusBar">true</item>
+</style>
+
 </resources>
