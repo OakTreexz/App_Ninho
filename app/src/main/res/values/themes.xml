@@ -1,16 +1,26 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-
-    <!-- Este é o tema que já existe, não mexa nele -->
-    <style name="Theme.App_Ninho" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- ...o que já estava aqui... -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.App_Ninho" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/petroleo</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorPrimaryContainer">@color/petroleo_claro</item>
+        <item name="colorOnPrimaryContainer">@color/petroleo</item>
+        <item name="colorSecondaryContainer">@color/petroleo_claro</item>
+        <item name="colorOnSecondaryContainer">@color/petroleo</item>
+        <item name="colorSurface">@android:color/white</item>
+        <item name="colorOnSurface">@color/tinta</item>
+        <item name="colorOnSurfaceVariant">@color/tinta_suave</item>
+        <item name="android:colorBackground">@color/fundo</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
-    <!-- Cole aqui, logo abaixo -->
-     <style name="Theme.App_Ninho.Splash" parent="Theme.App_Ninho">
-    <item name="android:windowBackground">@color/ninho_fundo</item>
-    <item name="android:statusBarColor">@color/ninho_fundo</item>
-    <item name="android:navigationBarColor">@color/ninho_fundo</item>
-    <item name="android:windowLightStatusBar">true</item>
-</style>
+    <style name="Theme.App_Ninho.Splash" />
 
+    <style name="Legenda">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:textSize">14sp</item>
+    </style>
 </resources>

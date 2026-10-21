@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:text="@string/home_titulo"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/home_subtitulo"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="16sp" />
+
+        <!-- Legenda do semáforo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/bg_dot"
+                    android:backgroundTint="@color/semaforo_verde" />
+
+                <TextView
+                    style="@style/Legenda"
+                    android:text="@string/legenda_verde" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/bg_dot"
+                    android:backgroundTint="@color/semaforo_amarelo" />
+
+                <TextView
+                    style="@style/Legenda"
+                    android:text="@string/legenda_amarelo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/bg_dot"
+                    android:backgroundTint="@color/semaforo_vermelho" />
+
+                <TextView
+                    style="@style/Legenda"
+                    android:text="@string/legenda_vermelho" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Grade dos 6 módulos -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_modulos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="20dp"
+            android:text="@string/aviso_educativo"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

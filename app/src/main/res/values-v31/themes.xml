@@ -1,4 +1,5 @@
 <resources>
+    <color name="ninho_fundo">#F5F0E8</color>
     <style name="Theme.App_Ninho.Splash" parent="Theme.App_Ninho">
         <item name="android:windowBackground">@color/ninho_fundo</item>
         <item name="android:statusBarColor">@color/ninho_fundo</item>

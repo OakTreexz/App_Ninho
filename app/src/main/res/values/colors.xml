@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="ninho_fundo">#FFF8F0</color>
+    <!-- Paleta do app -->
+    <color name="petroleo">#1F5F73</color>
+    <color name="petroleo_claro">#D9ECF1</color>
+    <color name="fundo">#F6FAFB</color>
+    <color name="tinta">#14262C</color>
+    <color name="tinta_suave">#4A5E65</color>
+
+    <!-- Semáforo (RNF03): reservado ao resultado da triagem -->
+    <color name="semaforo_verde">#2ECC71</color>
+    <color name="semaforo_amarelo">#F1C40F</color>
+    <color name="semaforo_vermelho">#E74C3C</color>
 </resources>

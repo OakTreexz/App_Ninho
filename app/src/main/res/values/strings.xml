@@ -1,3 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">App_Ninho</string>
+    <string name="app_name">Ninho</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_galeria">Galeria</string>
+    <string name="nav_infos">Infos</string>
+
+    <string name="home_titulo">O que você quer saber sobre o seu bebê?</string>
+    <string name="home_subtitulo">Escolha um assunto e compare com as imagens.</string>
+
+    <string name="legenda_verde">Em casa</string>
+    <string name="legenda_amarelo">Posto de saúde</string>
+    <string name="legenda_vermelho">Urgência</string>
+
+    <string name="modulo_fezes">Cocô</string>
+    <string name="modulo_pele">Pele e amarelão</string>
+    <string name="modulo_umbigo">Umbigo</string>
+    <string name="modulo_febre">Febre e respiração</string>
+    <string name="modulo_choro">Choro e cólica</string>
+    <string name="modulo_amamentacao">Amamentação e golfadas</string>
+
+    <string name="aviso_educativo">Ferramenta educativa baseada nas diretrizes do Ministério da Saúde. Não substitui consulta médica.</string>
 </resources>
+
