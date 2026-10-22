@@ -1,9 +1,11 @@
 package com.example.app_ninho;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,7 +29,13 @@ public class HomeFragment extends Fragment {
         RecyclerView lista = view.findViewById(R.id.rv_modulos);
         lista.setLayoutManager(new GridLayoutManager(requireContext(), 2));
         lista.setAdapter(new ModuloAdapter(modulo -> {
-            // TODO: abrir a galeria visual do módulo (US04)
+            if (modulo == ModuloClinico.FEZES) {
+                startActivity(new Intent(requireContext(), TriagemFezesActivity.class));
+            } else {
+                Toast.makeText(requireContext(),
+                        "Este módulo estará disponível em breve.",
+                        Toast.LENGTH_SHORT).show();
+            }
         }));
     }
 }

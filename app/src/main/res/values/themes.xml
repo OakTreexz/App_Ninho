@@ -12,6 +12,7 @@
         <item name="colorOnSurfaceVariant">@color/tinta_suave</item>
         <item name="android:colorBackground">@color/fundo</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="colorSurfaceContainerHigh">@android:color/white</item>
     </style>
 
     <style name="Theme.App_Ninho.Splash" />
