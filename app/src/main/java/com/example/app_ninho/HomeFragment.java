@@ -1,6 +1,5 @@
 package com.example.app_ninho;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,8 +28,8 @@ public class HomeFragment extends Fragment {
         RecyclerView lista = view.findViewById(R.id.rv_modulos);
         lista.setLayoutManager(new GridLayoutManager(requireContext(), 2));
         lista.setAdapter(new ModuloAdapter(modulo -> {
-            if (modulo == ModuloClinico.FEZES) {
-                startActivity(new Intent(requireContext(), TriagemFezesActivity.class));
+            if (Formularios.disponivel(modulo)) {
+                TriagemFezesActivity.abrir(requireContext(), modulo);
             } else {
                 Toast.makeText(requireContext(),
                         "Este módulo estará disponível em breve.",

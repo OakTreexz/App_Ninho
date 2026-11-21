@@ -1,12 +1,13 @@
 package com.example.app_ninho;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,16 +20,21 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.ArrayList;
 
-/** Formulário do módulo Cocô */
+/**
+ * Formulário de triagem, uma pergunta por tela. Serve para qualquer módulo:
+ * o módulo escolhido na Home define as perguntas.
+ */
 public class TriagemFezesActivity extends AppCompatActivity {
 
+    private static final String EXTRA_MODULO = "modulo";
     private static final String ESTADO_ATUAL = "atual";
     private static final String ESTADO_RESPOSTAS = "respostas";
 
+    private ModuloClinico modulo;
     private List<Pergunta> perguntas;
     private int[] respostas;   // índice da opção escolhida em cada pergunta (-1 = sem resposta)
     private int atual = 0;
@@ -40,6 +46,12 @@ public class TriagemFezesActivity extends AppCompatActivity {
     private MaterialButton btnVoltar;
     private MaterialButton btnProxima;
     private LinearProgressIndicator progresso;
+
+    public static void abrir(Context contexto, ModuloClinico modulo) {
+        Intent intent = new Intent(contexto, TriagemFezesActivity.class);
+        intent.putExtra(EXTRA_MODULO, modulo.name());
+        contexto.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,10 +65,14 @@ public class TriagemFezesActivity extends AppCompatActivity {
             return insets;
         });
 
+        String nome = getIntent().getStringExtra(EXTRA_MODULO);
+        modulo = (nome == null) ? ModuloClinico.FEZES : ModuloClinico.valueOf(nome);
+
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle(getString(modulo.getTitulo()));
         toolbar.setNavigationOnClickListener(v -> finish());
 
-        perguntas = FormularioCoco.perguntas();
+        perguntas = Formularios.para(modulo);
         respostas = new int[perguntas.size()];
         Arrays.fill(respostas, -1);
         if (savedInstanceState != null) {
@@ -109,7 +125,6 @@ public class TriagemFezesActivity extends AppCompatActivity {
             tvDica.setVisibility(View.VISIBLE);
         }
 
-        // Monta as alternativas desta pergunta
         rgOpcoes.setOnCheckedChangeListener(null);
         rgOpcoes.removeAllViews();
         LayoutInflater inflater = getLayoutInflater();
@@ -120,8 +135,6 @@ public class TriagemFezesActivity extends AppCompatActivity {
             rb.setTag(i);
             rgOpcoes.addView(rb);
         }
-
-        // Se a pessoa já respondeu (voltou para esta pergunta), marca a resposta de novo
         if (respostas[atual] >= 0 && respostas[atual] < opcoes.size()) {
             ((RadioButton) rgOpcoes.getChildAt(respostas[atual])).setChecked(true);
         }
@@ -130,7 +143,6 @@ public class TriagemFezesActivity extends AppCompatActivity {
         btnProxima.setText(atual == total - 1 ? "Ver resultado" : "Próxima");
         btnVoltar.setEnabled(atual > 0);
 
-        // Ao marcar uma alternativa, guarda a resposta e libera o botão
         rgOpcoes.setOnCheckedChangeListener((grupo, checkedId) -> {
             RadioButton marcado = grupo.findViewById(checkedId);
             if (marcado == null) return;
@@ -142,7 +154,6 @@ public class TriagemFezesActivity extends AppCompatActivity {
             if (escolhida.getNivel() == NivelRisco.VERMELHO) {
                 mostrarAlertaEmergencia(perguntas.get(atual), escolhida);
             }
-
         });
     }
 
@@ -191,7 +202,7 @@ public class TriagemFezesActivity extends AppCompatActivity {
         }
 
         NivelRisco nivel = temAmarelo ? NivelRisco.AMARELO : NivelRisco.VERDE;
-        ResultadoActivity.abrir(this, nivel, titulos, condutas);
+        ResultadoActivity.abrir(this, modulo, nivel, titulos, condutas);
         finish();
     }
-    }
+}

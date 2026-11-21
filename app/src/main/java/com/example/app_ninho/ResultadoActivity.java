@@ -19,13 +19,15 @@ import java.util.ArrayList;
 /** Resultado final do formulário (verde ou amarelo). O vermelho é tratado por pop-up. */
 public class ResultadoActivity extends AppCompatActivity {
 
+    private static final String EXTRA_MODULO = "modulo";
     private static final String EXTRA_NIVEL = "nivel";
     private static final String EXTRA_TITULOS = "titulos";
     private static final String EXTRA_CONDUTAS = "condutas";
 
-    public static void abrir(Context contexto, NivelRisco nivel,
+    public static void abrir(Context contexto, ModuloClinico modulo, NivelRisco nivel,
                              ArrayList<String> titulos, ArrayList<String> condutas) {
         Intent intent = new Intent(contexto, ResultadoActivity.class);
+        intent.putExtra(EXTRA_MODULO, modulo.name());
         intent.putExtra(EXTRA_NIVEL, nivel.name());
         intent.putStringArrayListExtra(EXTRA_TITULOS, titulos);
         intent.putStringArrayListExtra(EXTRA_CONDUTAS, condutas);
@@ -47,6 +49,9 @@ public class ResultadoActivity extends AppCompatActivity {
             return insets;
         });
 
+        String nomeModulo = getIntent().getStringExtra(EXTRA_MODULO);
+        final ModuloClinico modulo = (nomeModulo == null)
+                ? ModuloClinico.FEZES : ModuloClinico.valueOf(nomeModulo);
         NivelRisco nivel = NivelRisco.valueOf(getIntent().getStringExtra(EXTRA_NIVEL));
 
         int corFundo;
@@ -70,7 +75,6 @@ public class ResultadoActivity extends AppCompatActivity {
                     + "Saúde (UBS). Se o bebê piorar ou surgir algum sinal de alerta, vá à UPA.";
         }
 
-        // Painel colorido no topo, com texto escuro (boa leitura em verde e amarelo)
         painel.setBackgroundColor(ContextCompat.getColor(this, corFundo));
         int texto = ContextCompat.getColor(this, R.color.tinta);
         TextView tvTopo = findViewById(R.id.tv_topo);
@@ -79,6 +83,7 @@ public class ResultadoActivity extends AppCompatActivity {
         tvTopo.setTextColor(texto);
         tvNivel.setTextColor(texto);
         tvTitulo.setTextColor(texto);
+        tvTopo.setText("Resultado da triagem: " + getString(modulo.getTitulo()));
         tvNivel.setText(nome);
         tvTitulo.setText(titulo);
 
@@ -90,7 +95,7 @@ public class ResultadoActivity extends AppCompatActivity {
 
         findViewById(R.id.btn_inicio).setOnClickListener(v -> finish());
         findViewById(R.id.btn_refazer).setOnClickListener(v -> {
-            startActivity(new Intent(this, TriagemFezesActivity.class));
+            TriagemFezesActivity.abrir(this, modulo);
             finish();
         });
     }
