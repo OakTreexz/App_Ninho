@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo_ninho"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -35,6 +35,14 @@
 
         <activity
             android:name=".ResultadoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".FotosTopicoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".FotoDetalheActivity"
             android:exported="false" />
 
     </application>
