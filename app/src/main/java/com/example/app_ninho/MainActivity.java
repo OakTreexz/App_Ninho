@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (itemId == R.id.nav_galeria) {
             return new GaleriaFragment();
         } else if (itemId == R.id.nav_infos) {
-            return TelaProvisoriaFragment.novo(getString(R.string.nav_infos));
+            return new InfosFragment();
         }
         return null;
     }
