@@ -4,6 +4,13 @@ Formato baseado no [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/). 
 
 ## [Não lançado]
 
+## [0.1.1] - 2026-11-23
+
+### Adicionado
+
+- Aba Infos com as referências bibliográficas usadas no conteúdo do app.
+- Instruções de instalação do app no celular (arquivo APK) no README.
+
 ## [0.1.0] - 2026-11-21
 
 Primeira versão (MVP).
@@ -24,9 +31,10 @@ Primeira versão (MVP).
 
 ### Pendente
 
-- Aba Infos e aviso legal obrigatório na abertura.
+- Restante da aba Infos e aviso legal obrigatório na abertura.
 - Fotos de referência com licença livre.
 - Revisão do conteúdo clínico por profissional de saúde.
 
-[Não lançado]: https://github.com/OakTreexz/App_Ninho/compare/v0.1.0...HEAD
+[Não lançado]: https://github.com/OakTreexz/App_Ninho/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/OakTreexz/App_Ninho/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/OakTreexz/App_Ninho/releases/tag/v0.1.0

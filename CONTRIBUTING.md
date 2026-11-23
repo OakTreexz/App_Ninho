@@ -55,7 +55,7 @@ Formato: `tipo: descrição curta no presente`.
 
 - Base: `develop` (nunca a `main`, a não ser em uma versão).
 - Título no mesmo formato dos commits.
-- Preencha o modelo e ligue à issue com `Closes #número`.
+- Preencha o modelo e cite a issue com `Refs #número`. O GitHub só fecha uma issue sozinho quando o pull request vai para a `main`, por isso o `Closes #número` fica para a release.
 - Antes de abrir: o projeto compila e foi testado no celular ou no emulador.
 
 ## Versões
@@ -70,6 +70,7 @@ Para lançar uma versão:
 
 1. Atualize o [CHANGELOG.md](CHANGELOG.md) na `develop`.
 2. Abra um pull request da `develop` para a `main` e use **Create a merge commit** (não use squash aqui, para os ramos não se separarem).
+   Na descrição desse pull request, liste as issues entregues, uma por linha: `Closes #9`, `Closes #12`.
 3. Marque a versão e crie a Release no GitHub:
    ```
    git switch main

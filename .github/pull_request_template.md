@@ -19,4 +19,6 @@
 - [ ] Não há arquivos indevidos (`local.properties`, `.idea`, `build/`, chaves)
 - [ ] Conteúdo clínico novo ou alterado tem fonte indicada
 
-Closes #
+Refs #
+
+<!-- "Refs" só liga o pull request à issue. Na release (develop para main), use "Closes #número" para fechar as issues entregues. -->

@@ -8,7 +8,7 @@ Projeto da disciplina *Tópicos Avançados em Desenvolvimento de Software* — C
 
 > **Aviso:** o Ninho é uma ferramenta educativa. Ele não faz diagnóstico e **não substitui consulta médica**. O conteúdo clínico está em validação por profissional de saúde.
 
-**Versão atual:** [v0.1.0 (MVP)](https://github.com/OakTreexz/App_Ninho/releases/tag/v0.1.0) · [Histórico de mudanças](CHANGELOG.md)
+**Versão atual:** [v0.1.1](https://github.com/OakTreexz/App_Ninho/releases/tag/v0.1.1) · [Histórico de mudanças](CHANGELOG.md)
 
 ---
 
@@ -39,10 +39,11 @@ As regras são **fixas em código** (sem inteligência artificial) e rodam **no 
 - Pop-up de emergência para respostas de alerta vermelho.
 - Tela de resultado verde ou amarela, com orientação por resposta e fonte.
 - Galeria: assuntos, fotos de referência do Cocô (ainda como espaços reservados), filtro por cor e tela de detalhe.
+- Aba Infos com as referências bibliográficas usadas no conteúdo.
 
 ## Em desenvolvimento
 
-- Aba Infos (sobre o app, semáforo, fontes e privacidade).
+- Restante da aba Infos (como usar, semáforo e privacidade). Hoje ela traz só as referências.
 - Aviso legal obrigatório na abertura do app.
 - Fotos de referência com licença livre e fotos dos demais assuntos.
 - Revisão do conteúdo clínico por profissional de saúde.
@@ -53,6 +54,17 @@ As regras são **fixas em código** (sem inteligência artificial) e rodam **no 
 - Layouts em XML (Views), Fragments e RecyclerView
 - Material Components (Material 3)
 - Gradle
+
+## Instalar no celular
+
+Não precisa do Android Studio para testar o app.
+
+1. No celular, abra a página de [Releases](https://github.com/OakTreexz/App_Ninho/releases) e baixe o arquivo `Ninho-v0.1.1.apk`, na seção **Assets** da versão mais recente.
+2. Abra o arquivo baixado. Se o Android pedir, permita a **instalação de apps desconhecidos** para o navegador ou para o app de arquivos que você usou.
+3. Se o Google Play Protect avisar que o app não é conhecido, escolha **Instalar mesmo assim**. O aviso aparece porque o app não está na loja.
+4. Toque em **Abrir**.
+
+> Esta é uma versão de teste: o conteúdo clínico está em validação. Use apenas para avaliação.
 
 ## Como executar
 
