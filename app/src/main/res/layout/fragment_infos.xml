@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Referências"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="BRASIL. Ministério da Saúde. Saúde da criança: crescimento e desenvolvimento. Brasília, DF: Ministério da Saúde, 2012."
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="BRASIL. Ministério da Saúde. Caderneta da criança: menino: passaporte da cidadania. 7. ed. rev. Brasília, DF: Ministério da Saúde, 2025."
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="BRASIL. Ministério da Saúde. Caderneta da criança: menina: passaporte da cidadania. 7. ed. rev. Brasília, DF: Ministério da Saúde, 2025."
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="BRASIL. Ministério da Saúde. Atenção à saúde do recém-nascido: guia para os profissionais de saúde: cuidados gerais. 2. ed. atual. Brasília, DF: Ministério da Saúde, 2014. v. 1."
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="BRASIL. Ministério da Saúde. Atenção à saúde do recém-nascido: guia para os profissionais de saúde: intervenções comuns, icterícia e infecções. 2. ed. atual. Brasília, DF: Ministério da Saúde, 2014. v. 2."
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="BRASIL. Ministério da Saúde. Atenção à saúde do recém-nascido: guia para os profissionais de saúde: problemas respiratórios, cardiocirculatórios, metabólicos, neurológicos, ortopédicos e dermatológicos. Brasília, DF: Ministério da Saúde, 2011. v. 3."
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="BRASIL. Ministério da Saúde; ORGANIZAÇÃO PAN-AMERICANA DA SAÚDE. Manual AIDPI Neonatal: quadro de procedimentos. 5. ed., 1. reimpr. Brasília, DF: Ministério da Saúde, 2014."
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="SOCIEDADE BRASILEIRA DE PEDIATRIA. Departamento Científico de Neonatologia. Manual de seguimento do recém-nascido de alto risco. 2. ed. São Paulo: SBP, 2024."
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</ScrollView>
