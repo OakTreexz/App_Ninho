@@ -92,7 +92,7 @@ O trabalho segue um fluxo com ramos (`main`, `develop` e `feature/...`) e pull r
 - Landara Anne Melo Zinhani (coordenadora)
 - Tássia Borges Ferreira (secretária)
 - Jonathan Queiroz
-- Natália
+- Natália Apaª de J. Carvalho
 
 ## Documentação
 
