@@ -66,15 +66,13 @@ Não precisa do Android Studio para testar o app.
 
 > Esta é uma versão de teste: o conteúdo clínico está em validação. Use apenas para avaliação.
 
-## Como executar
+## Como instalar
 
-1. Instale o [Android Studio](https://developer.android.com/studio).
-2. Clone o repositório:
-   ```
-   git clone https://github.com/OakTreexz/App_Ninho.git
-   ```
-3. Abra a pasta no Android Studio e aguarde o Gradle sincronizar.
-4. Rode o app (▶) em um celular com a **Depuração USB** ligada ou em um emulador. A versão mínima do Android está em `minSdk`, no arquivo `app/build.gradle.kts`.
+    Baixe o arquivo Ninho-v0.1.1.apk abaixo, com o link abaixo:
+ https://github.com/OakTreexz/App_Ninho/releases/download/v0.1.1/Ninho-v0.1.1.apk
+ 
+    Abra o arquivo no celular e, se o Android pedir, permita a instalação de apps desconhecidos.
+    Se o Google Play Protect avisar, escolha Instalar mesmo assim.
 
 ## Estrutura do projeto
 
