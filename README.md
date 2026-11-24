@@ -66,13 +66,8 @@ Não precisa do Android Studio para testar o app.
 
 > Esta é uma versão de teste: o conteúdo clínico está em validação. Use apenas para avaliação.
 
-## Como instalar
-
-    Baixe o arquivo Ninho-v0.1.1.apk abaixo, com o link abaixo:
- https://github.com/OakTreexz/App_Ninho/releases/download/v0.1.1/Ninho-v0.1.1.apk
- 
-    Abra o arquivo no celular e, se o Android pedir, permita a instalação de apps desconhecidos.
-    Se o Google Play Protect avisar, escolha Instalar mesmo assim.
+## Link download direto
+    https://github.com/OakTreexz/App_Ninho/releases/download/v0.1.1/Ninho-v0.1.1.apk
 
 ## Estrutura do projeto
 
